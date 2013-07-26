@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>detalle app</title>
+    <!-- Mobile Specific Metas -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport" />
+
+<style type="text/css">
+
+body * {
+  margin: 0; padding: 0;
+  font-family: Helvetica, Sans-Serif;
+  }
+
+ul *{
+  list-style: none;
+  }
+
+.portfolio {
+  padding: 2px;
+  margin-left: auto; margin-right: auto;  margin-top:50px;
+  /*background-color: #ffd7ce;*/
+  width: 320px; /*was 510*/
+  /*these two properties will be inherited by .portfolio h2 and .portfolio p */
+  font-family: arial, serif; 
+  text-align: center;
+  }
+  
+.portfolio #grid ul{
+  list-style: none;
+  margin: 2px auto 0;
+  width: 320px;  /*was 468*/
+  }
+
+.portfolio #grid li {
+  float: left;
+  margin: 0 5px 5px 5px;
+  } 
+
+.portfolio #grid li a:hover img {
+  opacity:0.3;  filter:alpha(opacity=30);
+  }
+
+.portfolio #grid li img {
+  background-color: white;
+  padding: 2px; margin: 0;
+  border: 1px dotted #58595b;
+  width: 124px;
+  height: 145px;
+  }
+  
+.portfolio #grid li a {
+  display: block;
+  }
+
+
+.portfolio #biggrid ul{
+  list-style: none;
+  margin: 2px auto 0;
+  width: 320px;  /*was 468*/
+  }
+.portfolio #biggrid li {
+  float: left;
+  margin: 0 5px 5px 5px;
+  } 
+
+.portfolio #biggrid li img {
+  background-color: white;
+  padding: 2px; margin: 0;
+  border: 1px dotted #58595b;
+  width: 262px;
+  height: auto;
+  }
+
+ .portfolio #biggrid li a {
+  display: block;
+  }
+
+.portfolio #biggrid h2 {
+  position: absolute; 
+   top: 200px; 
+   left: -240px; 
+   width: 100%;
+  }
+
+.portfolio #biggrid h2 span { 
+   color: white; 
+   font: bold 24px/45px Helvetica, Sans-Serif; 
+   letter-spacing: -1px;  
+   background: rgb(0, 0, 0); /* fallback color */
+   background: rgba(0, 0, 0, 0.7);
+   padding: 10px; 
+}
+
+.portfolio #biggrid h2 span.spacer {
+   padding:0 5px;
+}
+
+
+</style>
+
+ 
+</head>
+
+    <body>      	
+		<div id="slider" class='swipe'>		
+        <ul>
+         <li id="home">
+            <div class="portfolio">
+                <ul id="biggrid">
+                    <li><a href="#"><img src="img/a11.jpg"></a></li>
+                    <h2><span>prueba<span class='spacer'></span><br/>linea</span></h2>
+                                        
+                </ul>
+                <ul id="grid">                    
+                    <li><a href="#"><img src="img/a12.jpg"></a></li>
+                    <li><a href="#"><img src="img/a13.jpg"></a></li>                    
+                </ul>
+            </div>
+
+        </li>
+
+		<li id="home1" style='display:none'>         
+
+                <div class="portfolio">
+                <ul id="grid">
+                    <li><a href="#"><img src="img/a11.jpg"></a></li>
+                    <li><a href="#"><img src="img/a12.jpg"></a></li>
+                    <li><a href="#"><img src="img/a13.jpg"></a></li>
+                    <li><a href="#"><img src="img/a21.jpg"></a></li>
+                    <li><a href="#"><img src="img/a22.jpg"></a></li>
+                    <li><a href="#"><img src="img/a23.jpg"></a></li>
+                </ul>
+                </div>
+
+
+		</li>
+	
+		</ul>
+		</div>
+
+<a href='#'>prev</a>
+<a href='#'>next</a>
+<br><br>
+
+
+<script src='js/swipe.js'></script>
+<script type="text/javascript">
+				
+(function(){
+
+    var mySwipe = "";
+
+    function bar(ev) 
+    {
+    	mySwipe = new Swipe(document.getElementById('slider'));		
+
+    }
+
+    if (document.addEventListener) 
+    {
+        // ^ = "look, old IE, nothing to worry about here, just show the 
+        //       HTML and have a lovely day otherwise"
+        
+      // window.addEventListener('load', bar, false);
+      // ^ use this if you want to wait for all data to be loaded, including
+      //   scripts and stylesheets and media
+
+      document.addEventListener('DOMContentLoaded', bar, false);
+      // ^ use this to start bar() when the document is parsed and ready, 
+      //   but _before_ any of the dependencies load - good demo is here:
+      //   http://ie.microsoft.com/testdrive/HTML5/DOMContentLoaded/Default.html
+      
+    }
+      
+    })();
+				
+</script>
+
+
+
+</body>
+</html>
